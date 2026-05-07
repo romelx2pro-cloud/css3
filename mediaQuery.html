@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* This is the big wrapper that holds all food cards. */
+      .container {
+        /* Put cards in one row when there is room. */
+        display: flex;
+        /* Move cards to the next line when space gets small. */
+        flex-wrap: wrap;
+        /* Do not let the wrapper become wider than 1200px. */
+        max-width: 1200px;
+        /* Keep the wrapper in the center. */
+        margin: 0 auto;
+        /* Add space inside the wrapper so background color can be seen. */
+        padding: 10px;
+        /* Add space between cards. */
+        gap: 20px;
+        /* Normal background on large screens. */
+        background-color: #fff;
+        /* Make color change look smooth. */
+        transition: background-color 0.3s ease-in-out;
+      }
+      /* This styles the whole page body. */
+      body {
+        /* Remove the browser's default outer spacing. */
+        margin: 0;
+        /* Give the page a normal light background on large screens. */
+        background-color: white;
+        /* Make the page color change smoothly too. */
+        transition: background-color 0.3s ease-in-out;
+      }
+      /* This is one single food card. */
+      .food {
+        /* Draw a border around each card. */
+        border: 3px solid lightgray;
+        /* Round the corners. */
+        border-radius: 30px;
+        /* Let the card resize nicely. */
+        flex: 1 1 350px;
+        /* Allow full width on small screens. */
+        width: 100%;
+        /* Do not let one card grow too wide. */
+        max-width: 350px;
+        /* Keep card background white on large screens. */
+        background-color: white;
+        /* Add space inside the card. */
+        padding: 12px;
+        /* Keep padding inside the width. */
+        box-sizing: border-box;
+        /* Make color change smooth. */
+        transition: background-color 0.3s ease-in-out;
+      }
+      /* This targets images inside the cards. */
+      .food img {
+        /* Make the image fit the card width. */
+        width: 100%;
+        /* Remove little inline gap under the image. */
+        display: block;
+        /* Round image corners too. */
+        border-radius: 20px;
+        /* Add space below image. */
+        margin-bottom: 10px;
+      }
+      /* The old global image rule was removed because it forced images to stay too wide. */
+      /* This media query starts when the screen is 1000px wide or smaller. */
+      @media (max-width: 1000px) {
+        /* Change the whole page color on smaller screens so the change is easy to notice. */
+        body {
+          background-color: mistyrose;
+        }
+        /* Change the whole wrapper color on small screens. */
+        .container {
+          background-color: #bc8f8f;
+          flex-direction: column;
+        }
+        /* Change each card color too, so the change is clearly visible. */
+        .food {
+          background-color: rosybrown;
+          color: white;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container .food {
+          background-color: skyblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="food">
+        <img src="images/food.webp" alt="" />Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Ab numquam architecto, dolor libero, sed
+        culpa porro est eaque facilis rerum ad ex a quasi autem, dolorem velit?
+        Iure, cupiditate eligendi reprehenderit alias, maxime autem assumenda
+        placeat magnam quidem minus expedita!
+      </div>
+      <div class="food">
+        <img src="images/food.webp" alt="" />Aperiam magni, maiores aliquam
+        repellat doloribus dignissimos velit consequuntur recusandae. Quaerat,
+        repellendus! Officiis rerum illum tenetur, tempora quia commodi!
+        Obcaecati, sit amet. Cumque tempore laborum nobis praesentium illo
+        voluptatem reiciendis commodi soluta vero sit? Repellendus corrupti sed
+        iste similique iusto.
+      </div>
+      <div class="food">
+        <img src="images/food.webp" alt="" />Illo delectus corporis esse
+        asperiores perspiciatis similique nemo libero quas molestias nulla non,
+        consectetur, repellendus impedit quia ut cumque quaerat provident
+        numquam nostrum autem modi sint totam! Non ratione, laudantium beatae
+        placeat minima aperiam animi debitis totam quidem, modi officia.
+      </div>
+      <div class="food">
+        <img src="images/food.webp" alt="" />Eius alias aspernatur cupiditate
+        unde, eos, quod officia enim neque ipsum quis ullam quam suscipit non
+        modi quae. Earum nobis molestiae vel, quae saepe eveniet alias aut
+        deserunt officia voluptatum aliquid odio aperiam, nam accusamus sed
+        doloremque dolore non ex.
+      </div>
+      <div class="food">
+        <img src="images/food.webp" alt="" />Molestiae tempora, esse veniam
+        corporis praesentium at eius repudiandae minima ex maiores sed corrupti
+        fugit animi voluptas sunt, fugiat quis repellendus quia explicabo
+        mollitia reprehenderit possimus dicta. Vitae tenetur laboriosam rem
+        aperiam animi? Dicta animi, adipisci in nesciunt perspiciatis officia.
+      </div>
+      <div class="food">
+        <img src="images/food.webp" alt="" />Qui aut deserunt hic rem,
+        laboriosam nemo eveniet quas incidunt labore necessitatibus corporis
+        repudiandae dignissimos voluptate vitae illum eius. Quibusdam pariatur
+        iusto quos magni illum perferendis aut deleniti quae. Nihil quos culpa
+        quia sapiente magni quasi rerum quibusdam sequi provident?
+      </div>
+    </div>
+  </body>
+</html>
